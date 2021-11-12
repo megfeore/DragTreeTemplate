@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.row1col1 = new System.Windows.Forms.Label();
             this.row1col2 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
             this.reactionLabel = new System.Windows.Forms.Label();
+            this.lightTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // row1col1
@@ -119,7 +121,7 @@
             // startButton
             // 
             this.startButton.Location = new System.Drawing.Point(176, 155);
-            this.startButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startButton.Margin = new System.Windows.Forms.Padding(2);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(63, 32);
             this.startButton.TabIndex = 8;
@@ -130,7 +132,7 @@
             // goButton
             // 
             this.goButton.Location = new System.Drawing.Point(176, 205);
-            this.goButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.goButton.Margin = new System.Windows.Forms.Padding(2);
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(63, 32);
             this.goButton.TabIndex = 9;
@@ -153,7 +155,7 @@
             // resetButton
             // 
             this.resetButton.Location = new System.Drawing.Point(176, 106);
-            this.resetButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(2);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(63, 32);
             this.resetButton.TabIndex = 11;
@@ -172,6 +174,11 @@
             this.reactionLabel.Size = new System.Drawing.Size(98, 17);
             this.reactionLabel.TabIndex = 12;
             this.reactionLabel.Text = "Reaction:";
+            // 
+            // lightTimer
+            // 
+            this.lightTimer.Interval = 400;
+            this.lightTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -193,7 +200,7 @@
             this.Controls.Add(this.row1col2);
             this.Controls.Add(this.row1col1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Racing Tree";
@@ -217,6 +224,7 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Label reactionLabel;
+        private System.Windows.Forms.Timer lightTimer;
     }
 }
 
